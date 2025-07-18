@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "design-guideline": {
+      "command": "node",
+      "args": ["./mcp/usage-design-guideline/dist/mcp/index.js"]
+    },
+    "figma-dev-mode-mcp-server": {
+      "type": "sse",
+      "url": "http://127.0.0.1:3845/sse"
+    }
+  }
+}

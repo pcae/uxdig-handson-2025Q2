@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@import './design-tokens.css';
+
+body {
+  @apply font-sans;
+}

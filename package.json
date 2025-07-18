@@ -1,0 +1,88 @@
+{
+  "name": "kds-frontend-boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --dir src",
+    "lint:fix": "yarn lint --fix",
+    "test": "TZ=Asia/Tokyo jest",
+    "type-check": "tsc",
+    "generate:api": "orval",
+    "tokens:convert": "node mcp/convertDesignTokens/convert-design-tokens.js",
+    "tokens:update": "node mcp/convertDesignTokens/convert-design-tokens.js --write",
+    "generate:design-tokens": "tokens:convert && tokens:update"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.2",
+    "@radix-ui/react-alert-dialog": "^1.1.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@tanstack/match-sorter-utils": "^8.8.4",
+    "@tanstack/react-query": "^4.33.0",
+    "@types/testing-library__jest-dom": "5.14.9",
+    "axios": "^1.4.0",
+    "bcryptjs": "^3.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "firebase": "^10.7.1",
+    "firebase-admin": "^13.1.0",
+    "jotai": "^2.3.1",
+    "lucide-react": "^0.354.0",
+    "next": "15.3.3",
+    "next-themes": "^0.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.47.0",
+    "react-transition-group": "^4.4.5",
+    "sonner": "^1.7.0",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.22.5",
+    "@faker-js/faker": "^9.6.0",
+    "@jest/globals": "^29.6.3",
+    "@mswjs/data": "^0.16.2",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@testing-library/jest-dom": "^6.1.2",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.3",
+    "@types/node": "20.5.8",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
+    "@types/react-transition-group": "^4.4.6",
+    "autoprefixer": "^10.4.21",
+    "encoding": "^0.1.13",
+    "eslint": "8.48.0",
+    "eslint-config-next": "15.3.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "husky": "^9.1.6",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "msw": "^2.7.3",
+    "orval": "^7.7.0",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.0.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "5.2.2"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  },
+  "volta": {
+    "node": "20.10.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.0.10",
+      "@types/react-dom": "19.0.4"
+    }
+  }
+}
